@@ -10,6 +10,14 @@ This template should help get you started developing with Vue 3 in Vite.
 
 See [Vite Configuration Reference](https://vitejs.dev/config/).
 
+## Project Colors
+
+Text - #E2F1FB
+Background - #041724
+Primary - #89C3F1
+Secondary - #60118C
+Accent - #E631D8
+
 ## Project Setup
 
 ```sh

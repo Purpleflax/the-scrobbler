@@ -1,7 +1,6 @@
 <script setup>
 import MainHeader from './components/MainHeader.vue'
 import MainFooter from './components/MainFooter.vue'
-import HomePage from './views/HomePage.vue'
 </script>
 
 <template>
@@ -16,14 +15,14 @@ import HomePage from './views/HomePage.vue'
       <template v-slot:left>
         <div class="inlineTitle">
           <img alt="Scrobbler Logo" src="./assets/logo.svg" style="height: 30px; width: 30px" />
-          <h1 class="roboto" style="font-size: 1.3rem">The Scrobbler</h1>
+          <h1 style="font-size: 1rem">The Scrobbler</h1>
         </div>
       </template>
       <template v-slot:right>
-        <button>Menu</button>
+        <button style="margin-right: 1vw">Login</button>
       </template>
     </MainHeader>
-    <HomePage />
+    <RouterView />
     <MainFooter />
   </div>
 </template>
@@ -36,24 +35,37 @@ import HomePage from './views/HomePage.vue'
 }
 
 .inlineTitle h1 {
-  color: #fefefe; /* Vue.js green */
+  color: #fefefe;
   font-size: 2rem;
   text-align: center;
-  margin: 20px 0;
 }
 
 button {
-  background-color: #42b983; /* Vue.js green */
-  color: white;
+  background-color: var(--background-color);
+  color: var(--text-color);
   border: none;
   padding: 10px 20px;
-  font-size: 1em;
-  cursor: pointer;
-  border-radius: 5px;
-  margin: 10px;
+  font-size: 1rem;
 }
 
 button:hover {
-  background-color: #36996f; /* Darker green for hover effect */
+  /* Transition text to a grey */
+  color: #7e7e7e;
+  animation: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
 }
 </style>
+
+<script>
+export default {
+  name: 'App',
+  components: {
+    MainHeader,
+    MainFooter
+  },
+  created() {
+    document.title = 'The Scrobbler'
+  }
+}
+</script>

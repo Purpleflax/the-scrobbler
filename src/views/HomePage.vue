@@ -1,8 +1,23 @@
+<script setup>
+import AboutUs from '../components/AboutUs.vue'
+import AlbumCoverGrid from '../components/AlbumCoverGrid.vue'
+</script>
 <template>
-  <div>
-    <h1>Home Page</h1>
+  <div class="homeRoot">
+    <AboutUs />
+    <AlbumCoverGrid />
   </div>
 </template>
+<style scoped>
+.homeRoot {
+  padding: 0 12%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+</style>
+
 <script>
 export default {
   name: 'HomePage',
@@ -12,4 +27,3 @@ export default {
   }
 }
 </script>
-<style></style>
