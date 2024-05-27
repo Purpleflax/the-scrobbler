@@ -13,13 +13,15 @@ import MainFooter from './components/MainFooter.vue'
   <div>
     <MainHeader>
       <template v-slot:left>
-        <div class="inlineTitle">
-          <img alt="Scrobbler Logo" src="./assets/logo.svg" style="height: 30px; width: 30px" />
-          <h1 style="font-size: 1rem">The Scrobbler</h1>
-        </div>
+        <RouterLink to="/" style="text-decoration: none">
+          <div class="inlineTitle">
+            <img alt="Scrobbler Logo" src="./assets/logo.svg" style="height: 30px; width: 30px" />
+            <h1 style="font-size: 1rem">The Scrobbler</h1>
+          </div>
+        </RouterLink>
       </template>
       <template v-slot:right>
-        <button style="margin-right: 1vw">Login</button>
+        <RouterLink to="/login"><button style="margin-right: 1vw">Login</button></RouterLink>
       </template>
     </MainHeader>
     <RouterView />

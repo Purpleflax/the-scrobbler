@@ -7,9 +7,15 @@
     </div>
     <div class="subText">
       <p>
-        From streaming services such as <span class="spotify">Spotify</span> and
+        Simply upload your historical listening data from
+        <span class="spotify">Spotify</span> or
         <span class="appleMusic">Apple Music</span>
+        <br />
+        and we'll take care of the rest.
       </p>
+    </div>
+    <div class="authButtonWrapper">
+      <button class="authButton">Login with Last.fm</button>
     </div>
   </div>
 </template>
@@ -31,10 +37,12 @@ export default {
   width: 100%;
   max-width: 35vw;
   max-height: 30vh;
+  line-height: 1.5em;
 }
 
 .subText {
   margin-top: 5vh;
+  line-height: 2.5em;
 }
 
 .lastFM {
@@ -61,5 +69,17 @@ export default {
   -webkit-text-fill-color: transparent;
   font-style: italic;
   font-weight: 700;
+}
+
+.authButtonWrapper {
+  margin-top: 5vh;
+}
+
+.authButton {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
 }
 </style>

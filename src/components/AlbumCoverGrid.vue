@@ -61,7 +61,7 @@ export default {
   grid-template-rows: repeat(6, 100px);
   gap: 10px;
   max-width: 35vw;
-  max-height: 25vh;
+  max-height: 40vh;
 }
 
 .grid-item {
